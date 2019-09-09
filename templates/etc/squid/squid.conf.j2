@@ -10,7 +10,7 @@ acl {{ item['name'] }} {{ item['type'] }} {{ item['arg'] }}
 # Local Networks
 {% if squid_acl_localnet is defined and squid_acl_localnet != [] %}
 {%   for item in squid_acl_localnet %}
-acl localnet src {{ item }}
+acl {{ item.name }} src {{ item.subnet }}
 {%   endfor %}
 {% endif %}
 

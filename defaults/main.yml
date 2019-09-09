@@ -13,9 +13,12 @@ squid_acl:
 # Adapt to list your (internal) IP networks from where browsing
 # should be allowed
 squid_acl_localnet:
-  - '10.0.0.0/8'
-  - '172.16.0.0/16'
-  - '192.168.0.0/16'
+  - name: subnet_10
+    subnet: '10.0.0.0/8'
+  - name: subnet_172
+    subnet: '172.16.0.0/16'
+  - name: subnet_192
+    subnet: '192.168.0.0/16'
 
 squid_acl_safeports:
   - port: '21'
